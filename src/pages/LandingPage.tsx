@@ -1,7 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { Logo } from '../components/Logo';
 import { AuthButton } from '../components/AuthButton';
 import { FeatureShowcase } from '../components/landing/FeatureShowcase';
 import { BenefitsSection } from '../components/landing/BenefitsSection';
@@ -10,40 +7,12 @@ import { SignalExamples } from '../components/landing/SignalExamples';
 import { ModelPortfolioSection } from '../components/landing/ModelPortfolioSection';
 import { Testimonials } from '../components/landing/Testimonials';
 import { FAQ } from '../components/landing/FAQ';
+import Navbar from '../components/Navbar';
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <Link to="/" className="flex items-center">
-              <Logo className="h-8 w-8" />
-              <span className="ml-2 text-xl font-bold text-gray-900">WhatCrypto</span>
-            </Link>
-            <div className="flex items-center gap-6">
-              <Link to="/how-it-works" className="text-gray-600 hover:text-gray-900 transition-colors">
-                How It Works
-              </Link>
-              <Link to="/pricing" className="text-gray-600 hover:text-gray-900 transition-colors">
-                Pricing
-              </Link>
-              <Link to="/blog" className="text-gray-600 hover:text-gray-900 transition-colors">
-                Guides
-              </Link>
-              <AuthButton 
-                type="login"
-                className="text-gray-600 hover:text-gray-900 transition-colors"
-              />
-              <AuthButton 
-                type="signup"
-                className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-              />
-            </div>
-          </div>
-        </div>
-      </header>
+     <Navbar />
 
       {/* Hero Section */}
       <div className="pt-32 pb-24">

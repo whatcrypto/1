@@ -4,7 +4,7 @@ import { useSubscription } from '../context/SubscriptionContext';
 import { SubscriptionModal } from '../components/subscription/SubscriptionModal';
 
 const Premium: React.FC = () => {
-  const { currentPlan } = useSubscription();
+  useSubscription();
   const [showModal, setShowModal] = useState(false);
 
   const features = [

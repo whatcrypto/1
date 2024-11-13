@@ -1,7 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { Logo } from '../components/Logo';
+import Navbar from '../components/Navbar';
 
 export default function Blog() {
   const guides = [
@@ -58,28 +57,7 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <Link to="/" className="flex items-center">
-              <Logo className="h-8 w-8" />
-              <span className="ml-2 text-xl font-bold text-gray-900">WhatCrypto</span>
-            </Link>
-            <div className="flex items-center gap-6">
-              <Link to="/how-it-works" className="text-gray-600 hover:text-gray-900 transition-colors">How It Works</Link>
-              <Link to="/pricing" className="text-gray-600 hover:text-gray-900 transition-colors">Pricing</Link>
-              <Link to="/blog" className="text-gray-600 hover:text-gray-900 transition-colors">Guides</Link>
-              <Link 
-                to="/pricing"
-                className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Navbar />
 
       <div className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,13 +85,13 @@ export default function Blog() {
           {/* Guides Grid */}
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {guides.map((guide) => (
-              <Link 
+              <Link
                 to={guide.path}
                 key={guide.title}
                 className="bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow"
               >
-                <img 
-                  src={guide.image} 
+                <img
+                  src={guide.image}
                   alt={guide.title}
                   className="w-full h-48 object-cover"
                 />

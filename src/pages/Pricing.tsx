@@ -1,8 +1,6 @@
-import React from 'react';
 import { useMemberstack } from '@memberstack/react';
 import { Check } from 'lucide-react';
-import { Logo } from '../components/Logo';
-import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 export default function Pricing() {
   const { openModal } = useMemberstack();
@@ -23,29 +21,7 @@ export default function Pricing() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <Link to="/" className="flex items-center">
-              <Logo className="h-8 w-8" />
-              <span className="ml-2 text-xl font-bold text-gray-900">WhatCrypto</span>
-            </Link>
-            <div className="flex items-center gap-6">
-              <Link to="/how-it-works" className="text-gray-600 hover:text-gray-900 transition-colors">
-                How It Works
-              </Link>
-              <Link to="/pricing" className="text-gray-600 hover:text-gray-900 transition-colors">
-                Pricing
-              </Link>
-              <Link to="/blog" className="text-gray-600 hover:text-gray-900 transition-colors">
-                Guides
-              </Link>
-            </div>
-          </div>
-        </div>
-      </header>
-
+  <Navbar />
       <div className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
